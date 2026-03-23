@@ -13,8 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Adam Lowther — Software Engineer",
-  description: "Personal portfolio of Adam Lowther, a software engineer focused on building great developer experiences and high-quality web applications.",
+  title: "Adam Lowther — Technology Leader",
+  description: "Personal portfolio of Adam Lowther, a technology leader focused on building great developer experiences and high-quality applications and services.",
+  metadataBase: new URL('https://adamlowther.me'),
+  generator: 'Next.js',
+  openGraph: {
+    images: '/images/IMG_0874.png',
+  },
 };
 
 export default function RootLayout({

@@ -15,6 +15,7 @@ export interface OwnerProfile {
 export interface Interest {
   name: string
   description?: string
+  image?: string
 }
 
 export interface ProjectLink {
@@ -40,4 +41,5 @@ export interface SocialLink {
 export interface Service {
   name: string
   description: string
+  color?: string
 }
