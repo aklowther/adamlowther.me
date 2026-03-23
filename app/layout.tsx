@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://adamlowther.me'),
   generator: 'Next.js',
   openGraph: {
-    images: '/images/IMG_0874.png',
+    images: '/images/IMG_0874.PNG',
   },
 };
 
