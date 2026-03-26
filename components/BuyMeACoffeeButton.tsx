@@ -6,7 +6,7 @@ import { useSearchParams } from 'next/navigation'
 export default function BuyMeACoffeeButton() {
   const searchParams = useSearchParams()
 
-  if (searchParams.get('bmac') !== 'true') {
+  if (searchParams.get('bmac') !== 'true1') {
     return null
   }
 
