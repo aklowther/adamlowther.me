@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       new URL('https://applitrack.me/**'),
       new URL('https://external.lowther.me/adam/**'),
+      new URL('https://cdn.buymeacoffee.com/**'),
     ],
   },
 }

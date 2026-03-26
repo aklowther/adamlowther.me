@@ -1,5 +1,7 @@
+import { Suspense } from 'react'
 import type { OwnerProfile } from '@/lib/types'
 import Image from 'next/image'
+import BuyMeACoffeeButton from '@/components/BuyMeACoffeeButton'
 
 /**
  * HeroSection — Server Component
@@ -38,16 +40,19 @@ export default function HeroSection({ profile }: { profile: OwnerProfile }) {
       <div className="flex flex-wrap gap-4">
         <a
           href="#projects"
-          className="px-6 py-3 rounded-lg bg-white text-zinc-950 font-medium text-sm hover:bg-zinc-200 transition-colors"
+          className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-white text-zinc-950 font-medium text-sm hover:bg-zinc-200 transition-colors"
         >
           View Projects
         </a>
         <a
           href="#contact"
-          className="px-6 py-3 rounded-lg border border-zinc-700 text-zinc-300 font-medium text-sm hover:border-zinc-500 hover:text-white transition-colors"
+          className="inline-flex items-center justify-center px-6 py-3 rounded-lg border border-zinc-700 text-zinc-300 font-medium text-sm hover:border-zinc-500 hover:text-white transition-colors"
         >
           Get in Touch
         </a>
+        <Suspense fallback={null}>
+          <BuyMeACoffeeButton />
+        </Suspense>
       </div>
     </section>
   )
