@@ -5,6 +5,7 @@ export interface OwnerProfile {
   devBio: string
   leaderBio: string
   email: string
+  appsEmail?: string
   linkedInUrl: string
   avatarPath?: string
   leaderPhotoPath?: string

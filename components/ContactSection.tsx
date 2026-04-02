@@ -1,4 +1,6 @@
 import type { OwnerProfile, SocialLink } from '@/lib/types'
+import { Suspense } from 'react'
+import ContactEmailLink from '@/components/ContactEmailLink'
 
 /**
  * ContactSection — Server Component
@@ -25,13 +27,19 @@ export default function ContactSection({
 
       <div className="flex flex-col gap-4">
         <div className="flex flex-wrap gap-4 items-center">
-          <a
-            href={`mailto:${profile.email}`}
-            className="text-zinc-300 hover:text-white underline underline-offset-2 transition-colors"
-            aria-label={`Email ${profile.email}`}
+          <Suspense
+            fallback={
+              <a
+                href={`mailto:${profile.email}`}
+                className="text-zinc-300 hover:text-white underline underline-offset-2 transition-colors"
+                aria-label={`Email ${profile.email}`}
+              >
+                {profile.email}
+              </a>
+            }
           >
-            {profile.email}
-          </a>
+            <ContactEmailLink email={profile.email} appsEmail={profile.appsEmail} />
+          </Suspense>
 
           <a
             href={profile.linkedInUrl}
