@@ -12,4 +12,14 @@ export const projects: Project[] = [
     tags: ['Swift / SwiftUI', 'CloudKit', 'Foundation Models'],
     imagePath: "/images/chatgpt_applitrack1_2.png",
   },
+    {
+    id: 'project-2',
+    title: 'Catan Trainer',
+    description: 'A randomized setup generator for the popular board game Catan.  Built with .NET and React, it provides players with unique board configurations to enable practicing their opening strategies.',
+    links: [
+      { label: 'GitHub', href: 'https://github.com/aklowther/CatanStarter', isExternal: true },
+    ],
+    tags: ['.NET', 'React'],
+    imagePath: "/images/catan.png",
+  },
 ]
